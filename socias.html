@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Socials</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, rgb(14, 2, 32), rgb(72, 34, 102));
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .social-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .social {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(248, 245, 248);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .social img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+
+        /* Delay for each icon */
+        .social:nth-child(1) { animation-delay: 0s; }
+        .social:nth-child(2) { animation-delay: 0.2s; }
+        .social:nth-child(3) { animation-delay: 0.4s; }
+        .social:nth-child(4) { animation-delay: 0.6s; }
+
+
+        #navbar {
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 600px;
+            background-color: rgb(120, 84, 174);
+            border-radius: 120px;
+            display: flex;
+            box-shadow: 0px 4px 60px rgba(60, 20, 65, 0.5);
+            z-index: 100;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            font-family: monospace;
+            color: white;
+            font-size: 1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+
+              .hero {
+            text-align: center;
+            margin-top: 120px;
+        }
+        #hero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.1;
+    filter: brightness(20%);
+    filter: contrast(90%);
+    z-index: -1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+       
+       <div id="navbar">
+           <ul>
+               <a href="portfolio.html"><li>Home</li></a>
+               <a href="aboutme.html"><li>Projects</li></a>
+               <a href="workexp.html"><li>Work Experience</li></a>
+               <a href="socias.html"><li>Socials</li></a>
+           </ul>
+       </div>
+   </header>
+   
+   <img id="hero" src="particle-bg.png">
+    <div class="social-container">
+        <a href="https://www.linkedin.com/in/raghuveer-singh-6b617a2a1/" class="social" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Raghuveer2005" class="social" target="_blank">
+            <img src="github.png" alt="GitHub">
+        </a>
+        <a href="mailto:raghuveersingh.november@gmail.com?subject=Hello%20Raghuveer&body=Hi%20there,%20I%20wanted%20to%20connect!" class="social">
+            <img src="gmail.png" alt="Email">
+        </a>
+
+        </a>
+    </div>
+
+</body>
+</html>

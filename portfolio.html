@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 250vh;
+            background: linear-gradient(120deg, rgb(14, 2, 32), rgb(87, 53, 115));
+            position: relative;
+            background-color: #25013d;
+            overflow-x: hidden;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 600px;
+            background-color: rgb(120, 84, 174);
+            border-radius: 120px;
+            display: flex;
+            box-shadow: 0px 4px 60px rgba(60, 20, 65, 0.5);
+            z-index: 100;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            font-family: monospace;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 120px;
+        }
+        #hero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.06;
+    filter: brightness(20%);
+    z-index: -1;
+}
+
+        h1 {
+            position: relative;
+            top: 300px;
+            right: 20%;
+            color: white;
+            font-size: 2.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            animation: fadeIn 2s ease-in forwards;
+        }
+
+        .specialchar {
+            background: linear-gradient(45deg, #ae97ae, #ad33ff, #dd33ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+
+        .about-me {
+            background: linear-gradient(45deg, #ae97ae, #ad33ff, #dd33ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            position: absolute;
+            top: 43%;
+            right: 47%;
+        }
+
+        #profilepic {
+            position: absolute;
+            top: 16%;
+            right: 20%;
+            width: 250px;
+            height: 270px;
+            border-radius: 28%;
+            box-shadow: 0px 0px 40px rgb(65, 28, 71);
+            animation: fadeIn 2s ease-in;
+            z-index: 10;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MY TECH - Initially Hidden */
+        #tech {
+            margin-top: 100vh;
+            margin-right: 60vh;
+            text-align: center;
+            font-size: 40px;
+            transform: translateY(30px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+            background: linear-gradient(75deg, #f3d0f3, #964ac8, #741587);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            box-shadow: 2px solid black ;
+        }
+
+        hr {
+            position: relative;
+            top: 40vh;
+            border: none;
+            height: 2.5px;
+            background-color: #682e8f;
+            width: 80%;
+        }
+
+
+        #hr2{
+            position: relative;
+            top: 120vh;
+            border: none;
+            height: 2.5px;
+            background-color: #682e8f;
+            width: 80%;
+        }
+
+        
+
+        /* Marquee Wrapper */
+        .marquee-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        
+            overflow: hidden;
+        }
+
+        /* Common Marquee Styles */
+        .marquee {
+            width: 100%;
+            background-color: rgb(34, 3, 62); /* Background now applies correctly */
+            padding: 15px 0;
+            position: relative;
+            margin-top: 25%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            scrollamount:1
+
+            /* Blur Effect on Edges */
+            mask-image linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        /* Marquee Content */
+        .marquee-content {
+            display: flex;
+            gap: 80px;
+            animation: scrollLeft 10s linear infinite;
+        }
+
+        /* First Marquee: Moves Left to Right */
+        .first .marquee-content {
+            animation: scrollRight 20s infinite
+        }
+
+        /* Tech Images */
+        .techimg {
+            width: 50px; /* Adjusted image size */
+            height: 50px;
+            object-fit: contain;
+            filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+        }
+
+        /* Left to Right Animation */
+        @keyframes scrollRight {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(400%);
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+
+        footer{
+            height: 300px;
+            width: 1600px;
+            background-color: #611a90;
+            position: absolute;
+            top: 250vh;
+            
+        }
+        .footxt{
+            position: absolute;
+            top:10vh;
+            left: 35vh;
+            background: linear-gradient(45deg, #ae97ae, #ad33ff, #dd33ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+
+        }
+        .main{
+            height: 100%;
+            margin-top: 0;
+        }
+        .buttonup{
+            position: relative;
+            left: 150vh;
+            top: 16vh;
+            background-color: #300c48;
+            color: aliceblue;
+            font-family:monospace;
+            width: 150px;
+            height: 80px;
+            padding: 10px;
+            border-radius: 30px;
+            border: 2px solid #2e0c44;
+            text-transform: uppercase;
+           
+        }
+        p{
+            color: rgb(185, 184, 184);
+            font-size: 19px;
+            position: absolute;
+            display: inline-block;
+            bottom: 46%;
+            left: 150px;
+            min-width: 80%;
+            max-width: 83%;
+            animation: fadeIn 2s ease-in;
+          
+        }
+    </style>
+
+</head>
+<body>
+    <div id="top">top</div>
+    <div class="main">
+    <header>
+       
+         <img id="hero" src="Untitled design.jpg">
+        
+        <div id="navbar">
+            <ul>
+                <a href="portfolio.html"><li>Home</li></a>
+                <a href="aboutme.html"><li>Projects</li></a>
+                <a href="workexp.html"><li>Work Experience</li></a>
+                <a href="socias.html"><li>Socials</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="top"> HI👋🏻,<br> I'M <span class="specialchar">RAGHUVEER SINGH </span>
+        <br> A <span class="specialchar">FULL STACK DEVELOPER</span></h1>
+       
+    </div>
+
+    <img id="profilepic" src="IMG_5164.jpg" alt="Profile Picture">
+    <br><br><br>
+    <hr>
+       <h1 class="about-me">About Me</h1>
+    <p>
+
+        I am a 19-year-old undergraduate student from India, currently pursuing my Bachelor's in Computer Applications (BCA). Passionate about web development, I enjoy creating interactive and user-friendly websites. With a strong foundation in front-end technologies and a keen interest in UI/UX design, I strive to build seamless digital experiences.
+        
+        Beyond coding, I actively seek opportunities to enhance my skills, collaborate on projects, and stay updated with the latest trends in web technologies. I believe in continuous learning and enjoy working in team environments that foster creativity and innovation.</p>
+
+
+
+        <hr id="hr2">
+      <!-- MY TECH -->
+    <h1 id="tech"> MY TECH</h1>
+
+
+    <div class="marquee-wrapper">
+        <!-- First Row (Left to Right) -->
+        <div class="marquee first">
+            <div class="marquee-content">
+                <img class="techimg" src="css.png" alt="CSS">
+                <img class="techimg" src="html.png" alt="HTML">
+                <img class="techimg" src="js.png" alt="JavaScript">
+                <img class="techimg" src="react.png" alt="React">
+            </div>
+        </div>
+     
+    
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 60vh;"></div> <!-- Extra content for scrolling -->
+
+
+    <footer>
+        <h1 class="footxt"> welcome to my portfolio</h1>
+      <a href="#top" > <button class="buttonup">back to top</button></a>
+    </footer>
+</div>
+
+</body>
+</html>
